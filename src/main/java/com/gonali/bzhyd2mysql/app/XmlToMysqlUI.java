@@ -203,8 +203,8 @@ public class XmlToMysqlUI extends JFrame {
     }
 
     private void getMysqlInfo() {
-        if (configFileTextField.getText().equals("") ||
-                configFileTextField.getText() == null)
+        if (configFileTextField.getText().trim().equals("") ||
+                configFileTextField.getText().trim() == null)
             return;
         statusTextArea.setText("\n\t正在连接数据库....");
         MysqlConfig.setValue(configFileTextField.getText());

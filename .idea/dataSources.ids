@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - wifi_ac@108.108.108.8 driver" uuid="4687643f-5ef1-416a-8654-7a328d201d06">
+  <data-source name="MySQL - wifi_ac@108.108.108.8" uuid="1bf90ce5-c3d5-419d-921a-0521cede8d84">
     <database-info product="MySQL" version="5.5.39-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -49,16 +49,16 @@
       <table id="38" parent="1" name="t_cmd"/>
       <table id="39" parent="1" name="t_device"/>
       <table id="40" parent="1" name="t_user"/>
-      <table id="41" parent="1" name="tb_crawler"/>
-      <table id="42" parent="1" name="tb_fbird"/>
-      <table id="43" parent="1" name="tbDoorNewsArticle"/>
-      <table id="44" parent="1" name="tbDoorNewsComment"/>
-      <table id="45" parent="1" name="tbDoorNewsImg"/>
-      <table id="46" parent="1" name="tbGovArticle"/>
-      <table id="47" parent="1" name="tbGovArticleImg"/>
-      <table id="48" parent="1" name="tbSogouWeChatArticle"/>
-      <table id="49" parent="1" name="tbTopBaidu"/>
-      <table id="50" parent="1" name="tbTopBaiduArticleInfo"/>
+      <table id="41" parent="1" name="tbDoorNewsArticle"/>
+      <table id="42" parent="1" name="tbDoorNewsComment"/>
+      <table id="43" parent="1" name="tbDoorNewsImg"/>
+      <table id="44" parent="1" name="tbGovArticle"/>
+      <table id="45" parent="1" name="tbGovArticleImg"/>
+      <table id="46" parent="1" name="tbSogouWeChatArticle"/>
+      <table id="47" parent="1" name="tbTopBaidu"/>
+      <table id="48" parent="1" name="tbTopBaiduArticleInfo"/>
+      <table id="49" parent="1" name="tb_crawler"/>
+      <table id="50" parent="1" name="tb_fbird"/>
       <column id="51" parent="34" name="configId">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
@@ -342,185 +342,192 @@
         <primary>1</primary>
       </key>
       <column id="130" parent="41" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)|0</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="131" parent="41" name="publicTime">
-        <data-type>datetime|0</data-type>
-      </column>
-      <column id="132" parent="41" name="text">
-        <data-type>longtext|0</data-type>
-      </column>
-      <column id="133" parent="41" name="fetched">
-        <mandatory>1</mandatory>
-        <data-type>tinyint(1)|0</data-type>
-      </column>
-      <column id="134" parent="41" name="html">
-        <mandatory>1</mandatory>
-        <data-type>text|0</data-type>
-      </column>
-      <column id="135" parent="41" name="title">
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="136" parent="41" name="url">
-        <data-type>varchar(250)|0</data-type>
-      </column>
-      <index id="137" parent="41" name="urlIndex">
-        <columns>url</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="138" parent="41" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <key id="139" parent="41" name="urlIndex">
-        <columns>url</columns>
-        <underlying-index>urlIndex</underlying-index>
-      </key>
-      <column id="140" parent="42" name="topicUpdatetblID">
-        <mandatory>1</mandatory>
-        <data-type>int(11)|0</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="141" parent="42" name="topicTaskID">
-        <mandatory>1</mandatory>
-        <data-type>varchar(176)|0</data-type>
-      </column>
-      <column id="142" parent="42" name="title">
-        <mandatory>1</mandatory>
-        <data-type>text|0</data-type>
-      </column>
-      <column id="143" parent="42" name="labelTime">
-        <data-type>datetime|0</data-type>
-      </column>
-      <column id="144" parent="42" name="url">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <column id="145" parent="42" name="fromUrl">
-        <mandatory>1</mandatory>
-        <data-type>text|0</data-type>
-      </column>
-      <column id="146" parent="42" name="rootUrl">
-        <mandatory>1</mandatory>
-        <data-type>text|0</data-type>
-      </column>
-      <column id="147" parent="42" name="crawlTime">
-        <mandatory>1</mandatory>
-        <data-type>datetime|0</data-type>
-      </column>
-      <column id="148" parent="42" name="deleteflag">
-        <mandatory>1</mandatory>
-        <data-type>tinyint(4)|0</data-type>
-      </column>
-      <key id="149" parent="42" name="PRIMARY">
-        <columns>topicUpdatetblID</columns>
-        <primary>1</primary>
-      </key>
-      <column id="150" parent="43" name="id">
         <comment>主键，自动增加</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20) unsigned|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="151" parent="43" name="domain">
+      <column id="131" parent="41" name="domain">
         <comment>域名</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="152" parent="43" name="topicMap">
+      <column id="132" parent="41" name="topicMap">
         <comment>文章栏目地图描述</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="153" parent="43" name="articleTitle">
+      <column id="133" parent="41" name="articleTitle">
         <comment>文章标题</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="154" parent="43" name="rawTitle">
+      <column id="134" parent="41" name="rawTitle">
         <comment>文章原标题</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="155" parent="43" name="publishTime">
+      <column id="135" parent="41" name="publishTime">
         <comment>文章发布时间</comment>
         <data-type>varchar(128)|0</data-type>
       </column>
-      <column id="156" parent="43" name="author">
+      <column id="136" parent="41" name="author">
         <comment>文章来源，作者</comment>
         <data-type>varchar(512)|0</data-type>
       </column>
-      <column id="157" parent="43" name="articleContents">
+      <column id="137" parent="41" name="articleContents">
         <comment>文章内容</comment>
         <data-type>longtext|0</data-type>
       </column>
-      <column id="158" parent="43" name="commentCount">
+      <column id="138" parent="41" name="commentCount">
         <comment>评论数</comment>
         <data-type>int(11)|0</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="159" parent="43" name="articleRawUrl">
+      <column id="139" parent="41" name="articleRawUrl">
         <comment>文章链接</comment>
         <data-type>varchar(760)|0</data-type>
       </column>
-      <column id="160" parent="43" name="crawlTime">
+      <column id="140" parent="41" name="crawlTime">
         <comment>爬取时间</comment>
         <data-type>datetime|0</data-type>
       </column>
-      <key id="161" parent="43" name="PRIMARY">
+      <key id="141" parent="41" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="162" parent="44" name="id">
+      <column id="142" parent="42" name="id">
         <comment>主键，自动增加</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20) unsigned|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="163" parent="44" name="domain">
+      <column id="143" parent="42" name="domain">
         <comment>域名</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="164" parent="44" name="articleRawUrl">
+      <column id="144" parent="42" name="articleRawUrl">
         <comment>文章链接</comment>
         <data-type>varchar(760)|0</data-type>
       </column>
-      <column id="165" parent="44" name="imgSrcUrl">
+      <column id="145" parent="42" name="imgSrcUrl">
         <comment>评论者头像链接</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="166" parent="44" name="author">
+      <column id="146" parent="42" name="author">
         <comment>评论者昵称</comment>
         <data-type>varchar(128)|0</data-type>
       </column>
-      <column id="167" parent="44" name="local">
+      <column id="147" parent="42" name="local">
         <comment>评论者评论时所在的地域</comment>
         <data-type>varchar(128)|0</data-type>
       </column>
-      <column id="168" parent="44" name="time">
+      <column id="148" parent="42" name="time">
         <comment>评论时间</comment>
         <data-type>varchar(128)|0</data-type>
       </column>
-      <column id="169" parent="44" name="contents">
+      <column id="149" parent="42" name="contents">
         <comment>评论内容</comment>
         <data-type>text|0</data-type>
       </column>
-      <column id="170" parent="44" name="likesCount">
+      <column id="150" parent="42" name="likesCount">
         <comment>点赞数</comment>
         <data-type>int(11)|0</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="171" parent="44" name="isImgDownload">
+      <column id="151" parent="42" name="isImgDownload">
         <comment>头像图片是否下载，false 未下载，true 已经下载</comment>
         <data-type>tinyint(1)|0</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="172" parent="44" name="imgName">
+      <column id="152" parent="42" name="imgName">
         <comment>头像图片名称</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="173" parent="44" name="savePath">
+      <column id="153" parent="42" name="savePath">
         <comment>头像图片保存在文件服务器或图片服务器上的路径</comment>
         <data-type>varchar(2048)|0</data-type>
+      </column>
+      <column id="154" parent="42" name="crawlTime">
+        <comment>爬取时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="155" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="156" parent="43" name="id">
+        <comment>主键，自动增加</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="157" parent="43" name="domain">
+        <comment>域名</comment>
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="158" parent="43" name="articleRawUrl">
+        <comment>文章链接</comment>
+        <data-type>varchar(760)|0</data-type>
+      </column>
+      <column id="159" parent="43" name="articleTitle">
+        <comment>文章标题</comment>
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="160" parent="43" name="imgSrcUrl">
+        <comment>文章中图片链接</comment>
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="161" parent="43" name="isDownload">
+        <comment>图片是否下载，false 图片没有下载，true 图片已经下载</comment>
+        <data-type>tinyint(1)|0</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="162" parent="43" name="imgName">
+        <comment>图片文件名称</comment>
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="163" parent="43" name="savePath">
+        <comment>图片的存储路径，在文件服务器上的路径或在图片服务器上的路径</comment>
+        <data-type>varchar(2048)|0</data-type>
+      </column>
+      <column id="164" parent="43" name="crawlTime">
+        <comment>爬取时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="165" parent="43" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="166" parent="44" name="id">
+        <comment>主键,自动增加</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="167" parent="44" name="domain">
+        <comment>域名</comment>
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="168" parent="44" name="topicMap">
+        <comment>文章栏目地图描述</comment>
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="169" parent="44" name="articleTitle">
+        <comment>文章标题</comment>
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="170" parent="44" name="publishTime">
+        <comment>文章发布时间</comment>
+        <data-type>varchar(128)|0</data-type>
+      </column>
+      <column id="171" parent="44" name="author">
+        <comment>文章来源，文章作者</comment>
+        <data-type>varchar(512)|0</data-type>
+      </column>
+      <column id="172" parent="44" name="articleContents">
+        <comment>文章内容</comment>
+        <data-type>longtext|0</data-type>
+      </column>
+      <column id="173" parent="44" name="articleRawUrl">
+        <comment>文章链接</comment>
+        <data-type>varchar(760)|0</data-type>
       </column>
       <column id="174" parent="44" name="crawlTime">
         <comment>爬取时间</comment>
@@ -574,204 +581,197 @@
         <primary>1</primary>
       </key>
       <column id="186" parent="46" name="id">
-        <comment>主键,自动增加</comment>
-        <mandatory>1</mandatory>
-        <data-type>bigint(20) unsigned|0</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="187" parent="46" name="domain">
-        <comment>域名</comment>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <column id="188" parent="46" name="topicMap">
-        <comment>文章栏目地图描述</comment>
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="189" parent="46" name="articleTitle">
-        <comment>文章标题</comment>
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="190" parent="46" name="publishTime">
-        <comment>文章发布时间</comment>
-        <data-type>varchar(128)|0</data-type>
-      </column>
-      <column id="191" parent="46" name="author">
-        <comment>文章来源，文章作者</comment>
-        <data-type>varchar(512)|0</data-type>
-      </column>
-      <column id="192" parent="46" name="articleContents">
-        <comment>文章内容</comment>
-        <data-type>longtext|0</data-type>
-      </column>
-      <column id="193" parent="46" name="articleRawUrl">
-        <comment>文章链接</comment>
-        <data-type>varchar(760)|0</data-type>
-      </column>
-      <column id="194" parent="46" name="crawlTime">
-        <comment>爬取时间</comment>
-        <data-type>datetime|0</data-type>
-      </column>
-      <key id="195" parent="46" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="196" parent="47" name="id">
         <comment>主键，自动增加</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20) unsigned|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="197" parent="47" name="domain">
-        <comment>域名</comment>
-        <data-type>varchar(255)|0</data-type>
-      </column>
-      <column id="198" parent="47" name="articleRawUrl">
-        <comment>文章链接</comment>
-        <data-type>varchar(760)|0</data-type>
-      </column>
-      <column id="199" parent="47" name="articleTitle">
-        <comment>文章标题</comment>
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="200" parent="47" name="imgSrcUrl">
-        <comment>文章中图片链接</comment>
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="201" parent="47" name="isDownload">
-        <comment>图片是否下载，false 图片没有下载，true 图片已经下载</comment>
-        <data-type>tinyint(1)|0</data-type>
-        <default-expression>&apos;0&apos;</default-expression>
-      </column>
-      <column id="202" parent="47" name="imgName">
-        <comment>图片文件名称</comment>
-        <data-type>varchar(1024)|0</data-type>
-      </column>
-      <column id="203" parent="47" name="savePath">
-        <comment>图片的存储路径，在文件服务器上的路径或在图片服务器上的路径</comment>
-        <data-type>varchar(2048)|0</data-type>
-      </column>
-      <column id="204" parent="47" name="crawlTime">
-        <comment>爬取时间</comment>
-        <data-type>datetime|0</data-type>
-      </column>
-      <key id="205" parent="47" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="206" parent="48" name="id">
-        <comment>主键，自动增加</comment>
-        <mandatory>1</mandatory>
-        <data-type>bigint(20) unsigned|0</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="207" parent="48" name="weChatNo">
+      <column id="187" parent="46" name="weChatNo">
         <comment>微信号</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="208" parent="48" name="weChatName">
+      <column id="188" parent="46" name="weChatName">
         <comment>微信名称</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="209" parent="48" name="mainGroup">
+      <column id="189" parent="46" name="mainGroup">
         <comment>账号主体</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="210" parent="48" name="essential">
+      <column id="190" parent="46" name="essential">
         <comment>微信号功能介绍</comment>
         <data-type>varchar(4096)|0</data-type>
       </column>
-      <column id="211" parent="48" name="articleTitle">
+      <column id="191" parent="46" name="articleTitle">
         <comment>文章标题</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="212" parent="48" name="publishTime">
+      <column id="192" parent="46" name="publishTime">
         <comment>文章发布时间</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="213" parent="48" name="articleStyleContents">
+      <column id="193" parent="46" name="articleStyleContents">
         <comment>带HTML格式的文章内容</comment>
         <data-type>longtext|0</data-type>
       </column>
-      <column id="214" parent="48" name="readCount">
+      <column id="194" parent="46" name="readCount">
         <comment>阅读数</comment>
         <data-type>int(11)|0</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="215" parent="48" name="likesCount">
+      <column id="195" parent="46" name="likesCount">
         <comment>点赞数</comment>
         <data-type>int(11)|0</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="216" parent="48" name="crawlTime">
+      <column id="196" parent="46" name="crawlTime">
         <comment>爬取时间</comment>
         <data-type>datetime|0</data-type>
       </column>
-      <key id="217" parent="48" name="PRIMARY">
+      <key id="197" parent="46" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="218" parent="49" name="id">
+      <column id="198" parent="47" name="id">
         <comment>主键</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20) unsigned|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="219" parent="49" name="topNo">
+      <column id="199" parent="47" name="topNo">
         <comment>热榜排名</comment>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="220" parent="49" name="keyWords">
+      <column id="200" parent="47" name="keyWords">
         <comment>关键词</comment>
         <data-type>varchar(128)|0</data-type>
       </column>
-      <column id="221" parent="49" name="searchIndex">
+      <column id="201" parent="47" name="searchIndex">
         <comment>搜索指数</comment>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="222" parent="49" name="searchUrl">
+      <column id="202" parent="47" name="searchUrl">
         <comment>关键词搜索链接</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="223" parent="49" name="crawlTime">
+      <column id="203" parent="47" name="crawlTime">
         <comment>爬取时间</comment>
         <data-type>datetime|0</data-type>
       </column>
-      <key id="224" parent="49" name="PRIMARY">
+      <key id="204" parent="47" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="225" parent="50" name="id">
+      <column id="205" parent="48" name="id">
         <comment>主键，自动增加</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(20)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="226" parent="50" name="articleTitle">
+      <column id="206" parent="48" name="articleTitle">
         <comment>文章标题</comment>
         <data-type>varchar(1024)|0</data-type>
       </column>
-      <column id="227" parent="50" name="essential">
+      <column id="207" parent="48" name="essential">
         <comment>文章概要</comment>
         <data-type>varchar(4096)|0</data-type>
       </column>
-      <column id="228" parent="50" name="publishTime">
+      <column id="208" parent="48" name="publishTime">
         <comment>文章发布时间</comment>
         <data-type>varchar(64)|0</data-type>
       </column>
-      <column id="229" parent="50" name="keyWords">
+      <column id="209" parent="48" name="keyWords">
         <comment>关键词</comment>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="230" parent="50" name="articleRawUrl">
+      <column id="210" parent="48" name="articleRawUrl">
         <comment>文章链接</comment>
         <data-type>varchar(760)|0</data-type>
       </column>
-      <column id="231" parent="50" name="crawlTime">
+      <column id="211" parent="48" name="crawlTime">
         <comment>爬取时间</comment>
         <data-type>datetime|0</data-type>
       </column>
-      <key id="232" parent="50" name="PRIMARY">
+      <key id="212" parent="48" name="PRIMARY">
         <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="213" parent="49" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="214" parent="49" name="publicTime">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="215" parent="49" name="text">
+        <data-type>longtext|0</data-type>
+      </column>
+      <column id="216" parent="49" name="fetched">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="217" parent="49" name="html">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="218" parent="49" name="title">
+        <data-type>varchar(1024)|0</data-type>
+      </column>
+      <column id="219" parent="49" name="url">
+        <data-type>varchar(250)|0</data-type>
+      </column>
+      <index id="220" parent="49" name="urlIndex">
+        <columns>url</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="221" parent="49" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="222" parent="49" name="urlIndex">
+        <columns>url</columns>
+        <underlying-index>urlIndex</underlying-index>
+      </key>
+      <column id="223" parent="50" name="topicUpdatetblID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="224" parent="50" name="topicTaskID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(176)|0</data-type>
+      </column>
+      <column id="225" parent="50" name="title">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="226" parent="50" name="labelTime">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="227" parent="50" name="url">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="228" parent="50" name="fromUrl">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="229" parent="50" name="rootUrl">
+        <mandatory>1</mandatory>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="230" parent="50" name="crawlTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="231" parent="50" name="deleteflag">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <key id="232" parent="50" name="PRIMARY">
+        <columns>topicUpdatetblID</columns>
         <primary>1</primary>
       </key>
     </database-model>
